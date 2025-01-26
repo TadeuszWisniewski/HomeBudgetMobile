@@ -29,6 +29,10 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{bdb66994-1ae7-31f2-baea-81e782782493}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WeatherForecastController.cs",
@@ -40,10 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T07:45:49.545Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{bdb66994-1ae7-31f2-baea-81e782782493}"
             },
             {
               "$type": "Document",
@@ -64,8 +64,8 @@
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Properties\\launchSettings.json*",
-              "RelativeToolTip": "HomeBudgetMobile.API\\Properties\\launchSettings.json*",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "HomeBudgetMobile.API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-26T07:44:47.242Z",
