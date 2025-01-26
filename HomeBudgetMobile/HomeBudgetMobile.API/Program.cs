@@ -1,3 +1,6 @@
+using HomeBudgetMobile.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace HomeBudgetMobile.API
 {
     public class Program
@@ -11,6 +14,9 @@ namespace HomeBudgetMobile.API
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<BudgetContext>(options 
+                => options.UseSqlServer(builder.Configuration.GetConnectionString("Budget")));
 
             var app = builder.Build();
 
