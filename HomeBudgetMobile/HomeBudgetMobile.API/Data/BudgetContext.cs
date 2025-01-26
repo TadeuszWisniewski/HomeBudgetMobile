@@ -78,6 +78,8 @@ public partial class BudgetContext : DbContext
         modelBuilder.Entity<IncomeSource>(entity =>
         {
             entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.HasData(
+                new IncomeSource { Name = "Salary", Active = true });
         });
 
         modelBuilder.Entity<Saving>(entity =>
