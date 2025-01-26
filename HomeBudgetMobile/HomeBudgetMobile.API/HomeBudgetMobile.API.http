@@ -1,0 +1,6 @@
+@HomeBudgetMobile.API_HostAddress = http://localhost:5063
+
+GET {{HomeBudgetMobile.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
