@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|solutionrelative:homebudgetmobile.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|solutionrelative:homebudgetmobile.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|solutionrelative:homebudgetmobile.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|solutionrelative:homebudgetmobile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "HomeBudgetMobile.API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:45:49.545Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{bdb66994-1ae7-31f2-baea-81e782782493}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\WeatherForecast.cs",
+              "RelativeToolTip": "HomeBudgetMobile.API\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:45:50.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Properties\\launchSettings.json*",
+              "RelativeToolTip": "HomeBudgetMobile.API\\Properties\\launchSettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-26T07:44:47.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Program.cs",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Program.cs",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Program.cs",
+              "RelativeToolTip": "HomeBudgetMobile.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:43:20.743Z",
+              "EditorCaption": ""
             }
           ]
         }
