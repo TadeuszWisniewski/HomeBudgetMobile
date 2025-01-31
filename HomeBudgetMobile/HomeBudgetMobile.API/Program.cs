@@ -15,8 +15,9 @@ namespace HomeBudgetMobile.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<BudgetContext>(options 
-                => options.UseSqlServer(builder.Configuration.GetConnectionString("Budget")));
+            builder.Services.AddDbContext<HomeBudgetMobileDbContext>(options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("HomeBudgetMobileConnectionString")));
+           
 
             var app = builder.Build();
 
