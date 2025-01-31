@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61801B2B-2637-40AD-A8DB-8FC581D5AFC8}|HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj|solutionrelative:homebudgetmobile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{bdb66994-1ae7-31f2-baea-81e782782493}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250131085433_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs",
-              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs",
-              "RelativeToolTip": "HomeBudgetMobile.API\\Migrations\\20250131085433_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T08:54:33.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Program.cs",
-              "RelativeDocumentMoniker": "HomeBudgetMobile.API\\Program.cs",
-              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.API\\Program.cs",
-              "RelativeToolTip": "HomeBudgetMobile.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T11:34:38.095Z",
-              "EditorCaption": ""
             }
           ]
         }

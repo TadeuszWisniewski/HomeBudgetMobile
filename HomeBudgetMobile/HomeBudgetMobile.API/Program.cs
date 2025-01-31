@@ -1,4 +1,7 @@
 using HomeBudgetMobile.API.Data;
+using HomeBudgetMobile.API.Mappings;
+using HomeBudgetMobile.API.Repositories;
+using HomeBudgetMobile.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HomeBudgetMobile.API
@@ -17,6 +20,9 @@ namespace HomeBudgetMobile.API
 
             builder.Services.AddDbContext<HomeBudgetMobileDbContext>(options => 
                 options.UseSqlServer(builder.Configuration.GetConnectionString("HomeBudgetMobileConnectionString")));
+
+            builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
+            builder.Services.AddScoped<IIncomeSourceRepository, SqlIncomeSourceRepository>();
            
 
             var app = builder.Build();
