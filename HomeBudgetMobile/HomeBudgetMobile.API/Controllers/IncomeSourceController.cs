@@ -20,7 +20,7 @@ namespace HomeBudgetMobile.API.Controllers
             this.incomeSourceRepository = incomeSourceRepository;
         }
 
-        // GET ncomeSources
+        // GET IncomeSources
         // GET: /api/IncomeSources
         [HttpGet]
         public async Task<IActionResult> GetAll()
