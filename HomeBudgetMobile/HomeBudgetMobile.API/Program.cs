@@ -25,6 +25,7 @@ namespace HomeBudgetMobile.API
             builder.Services.AddScoped<IIncomeSourceRepository, SqlIncomeSourceRepository>();
             builder.Services.AddScoped<IExpenseSortRepository, SQLExpenseSortRepository>();
             builder.Services.AddScoped<IGoalRepository, SQLGoalRepository>();
+            builder.Services.AddScoped<IIncomeRepository, SQLIncomeRepository>();
            
 
             var app = builder.Build();
