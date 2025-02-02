@@ -1,6 +1,6 @@
-﻿namespace HomeBudgetMobile.API.Model.Domain
+﻿namespace HomeBudgetMobile.API.Model.DTO.Saving
 {
-    public class Saving
+    public class SavingDto
     {
         public Guid Id { get; set; }
         public decimal Amount { get; set; }
@@ -8,10 +8,5 @@
         public string? Description { get; set; }
         public bool IsActive { get; set; } = true;
         public Guid GoalId { get; set; }
-
-
-        // Navigation property
-        public Goal Goal { get; set; } = null!;
-        public List<User> Users { get; } = [];
     }
 }

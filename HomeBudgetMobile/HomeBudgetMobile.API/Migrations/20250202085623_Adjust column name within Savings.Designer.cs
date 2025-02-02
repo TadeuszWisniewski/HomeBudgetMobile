@@ -4,6 +4,7 @@ using HomeBudgetMobile.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeBudgetMobile.API.Migrations
 {
     [DbContext(typeof(HomeBudgetMobileDbContext))]
-    partial class HomeBudgetMobileDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250202085623_Adjust column name within Savings")]
+    partial class AdjustcolumnnamewithinSavings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
