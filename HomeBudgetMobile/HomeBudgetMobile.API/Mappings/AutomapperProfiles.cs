@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HomeBudgetMobile.API.Model.Domain;
+using HomeBudgetMobile.API.Model.DTO.Expense;
 using HomeBudgetMobile.API.Model.DTO.ExpenseSort;
 using HomeBudgetMobile.API.Model.DTO.Goal;
 using HomeBudgetMobile.API.Model.DTO.Income;
@@ -26,6 +27,10 @@ namespace HomeBudgetMobile.API.Mappings
             CreateMap<Income, IncomeDto>().ReverseMap();
             CreateMap<Income, UpdateIncomeDto>().ReverseMap();
             CreateMap<Income, CreateIncomeDto>().ReverseMap();
+
+            CreateMap<Expense, ExpenseDto>().ReverseMap();
+            CreateMap<Expense, UpdateExpenseDto>().ReverseMap();
+            CreateMap<Expense, CreateExpenseDto>().ReverseMap();
         }
     }
 }

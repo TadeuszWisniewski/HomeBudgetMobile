@@ -38,7 +38,7 @@ namespace HomeBudgetMobile.API.Repositories
 
         public async Task<List<ExpenseSort>> GetAllAsync()
         {
-            return await homeBudgetMobileDbContext.ExpenseSorts.ToListAsync();
+            return await homeBudgetMobileDbContext.ExpenseSorts.Include(x => x.Expenses).ToListAsync();
         }
 
         public async Task<ExpenseSort?> GetByIdAsync(Guid id)

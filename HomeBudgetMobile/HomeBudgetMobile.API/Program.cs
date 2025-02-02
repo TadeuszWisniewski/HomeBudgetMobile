@@ -22,10 +22,12 @@ namespace HomeBudgetMobile.API
                 options.UseSqlServer(builder.Configuration.GetConnectionString("HomeBudgetMobileConnectionString")));
 
             builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
+
             builder.Services.AddScoped<IIncomeSourceRepository, SqlIncomeSourceRepository>();
             builder.Services.AddScoped<IExpenseSortRepository, SQLExpenseSortRepository>();
             builder.Services.AddScoped<IGoalRepository, SQLGoalRepository>();
             builder.Services.AddScoped<IIncomeRepository, SQLIncomeRepository>();
+            builder.Services.AddScoped<IExpenseRepository, SQLExpenseRepository>();
            
 
             var app = builder.Build();

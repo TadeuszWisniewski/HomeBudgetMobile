@@ -1,6 +1,8 @@
-﻿namespace HomeBudgetMobile.API.Model.Domain
+﻿using HomeBudgetMobile.API.Model.DTO.ExpenseSort;
+
+namespace HomeBudgetMobile.API.Model.DTO.Expense
 {
-    public class Expense
+    public class ExpenseDto
     {
         public Guid Id { get; set; }
         public decimal Amount { get; set; }
@@ -9,9 +11,6 @@
         public bool IsActive { get; set; } = true;
         public Guid ExpenseSortId { get; set; }
 
-
-        // Navigation properties
-        public ExpenseSort ExpenseSort { get; set; } = null!;
-        public List<User> Users { get; } = [];
+        //public ExpenseSortDto ExpenseSort { get; set; } = null!;
     }
 }
