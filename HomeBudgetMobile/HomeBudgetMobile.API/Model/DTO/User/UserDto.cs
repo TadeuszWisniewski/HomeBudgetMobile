@@ -7,5 +7,10 @@
         public string Surname { get; set; }
         public string? Description { get; set; }
         public bool IsActive { get; set; } = true;
+
+        // Navigation properties
+        public List<Income.IncomeDto> Incomes { get; } = [];
+        public List<Saving.SavingDto> Savings { get; } = [];
+        public List<Expense.ExpenseDto> Expenses { get; } = [];
     }
 }
