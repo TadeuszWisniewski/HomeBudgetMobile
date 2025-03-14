@@ -1,0 +1,555 @@
+[
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpensesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpensesController",
+    "Method": "Create",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createExpenseDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Expense.CreateExpenseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpensesController",
+    "Method": "GetById",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpensesController",
+    "Method": "Update",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateExpenseDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Expense.UpdateExpenseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpensesController",
+    "Method": "Delete",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpenseSortController",
+    "Method": "GetAll",
+    "RelativePath": "api/ExpenseSort",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpenseSortController",
+    "Method": "Create",
+    "RelativePath": "api/ExpenseSort",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createExpenseSortDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.ExpenseSort.CreateExpenseSortDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpenseSortController",
+    "Method": "GetById",
+    "RelativePath": "api/ExpenseSort/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpenseSortController",
+    "Method": "Update",
+    "RelativePath": "api/ExpenseSort/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateExpenseSortDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.ExpenseSort.UpdateExpenseSortDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.ExpenseSortController",
+    "Method": "Delete",
+    "RelativePath": "api/ExpenseSort/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.GoalController",
+    "Method": "GetAll",
+    "RelativePath": "api/Goal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.GoalController",
+    "Method": "Create",
+    "RelativePath": "api/Goal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createGoalDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Goal.CreateGoalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.GoalController",
+    "Method": "GetById",
+    "RelativePath": "api/Goal/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.GoalController",
+    "Method": "Update",
+    "RelativePath": "api/Goal/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateGoalDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Goal.UpdateGoalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.GoalController",
+    "Method": "Delete",
+    "RelativePath": "api/Goal/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Income",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeController",
+    "Method": "Create",
+    "RelativePath": "api/Income",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createIncomeDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Income.CreateIncomeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeController",
+    "Method": "GetById",
+    "RelativePath": "api/Income/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeController",
+    "Method": "Update",
+    "RelativePath": "api/Income/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateIncomeDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Income.UpdateIncomeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeController",
+    "Method": "Delete",
+    "RelativePath": "api/Income/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeSourceController",
+    "Method": "GetAll",
+    "RelativePath": "api/IncomeSource",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeSourceController",
+    "Method": "Create",
+    "RelativePath": "api/IncomeSource",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createIncomeSourceDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.IncomeSource.CreateIncomeSourceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeSourceController",
+    "Method": "GetById",
+    "RelativePath": "api/IncomeSource/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeSourceController",
+    "Method": "Update",
+    "RelativePath": "api/IncomeSource/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateIncomeSourceDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.IncomeSource.UpdateIncomeSourceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.IncomeSourceController",
+    "Method": "Delete",
+    "RelativePath": "api/IncomeSource/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.SavingsController",
+    "Method": "Create",
+    "RelativePath": "api/Savings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createSavingDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Saving.CreateSavingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.SavingsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Savings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.SavingsController",
+    "Method": "GetById",
+    "RelativePath": "api/Savings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.SavingsController",
+    "Method": "Update",
+    "RelativePath": "api/Savings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateSavingDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.Saving.UpdateSavingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.SavingsController",
+    "Method": "Delete",
+    "RelativePath": "api/Savings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "Create",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.User.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "GetById",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "Update",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserDto",
+        "Type": "HomeBudgetMobile.API.Model.DTO.User.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "Delete",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
