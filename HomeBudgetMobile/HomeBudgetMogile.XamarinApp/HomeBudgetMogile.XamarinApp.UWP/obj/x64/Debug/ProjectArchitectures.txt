@@ -1,1 +1,0 @@
-C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMogile.XamarinApp\HomeBudgetMogile.XamarinApp.UWP\HomeBudgetMogile.XamarinApp.UWP.csproj;x64
