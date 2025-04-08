@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA1356A-6F14-404C-BAB9-41A4BA81E58B}|HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.app\\views\\summarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4AA1356A-6F14-404C-BAB9-41A4BA81E58B}|HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj|solutionrelative:homebudgetmobile.app\\views\\summarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AA1356A-6F14-404C-BAB9-41A4BA81E58B}|HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj|c:\\users\\wisni\\desktop\\skilleddeveloper\\dotnet\\mobile\\homebudgetmobile\\homebudgetmobile.app\\homebudgetmobile.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4AA1356A-6F14-404C-BAB9-41A4BA81E58B}|HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj|solutionrelative:homebudgetmobile.app\\homebudgetmobile.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SummaryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.APP\\Views\\SummaryPage.xaml",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.APP\\Views\\SummaryPage.xaml",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.APP\\Views\\SummaryPage.xaml",
+              "RelativeToolTip": "HomeBudgetMobile.APP\\Views\\SummaryPage.xaml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T13:59:25.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeBudgetMobile.APP",
+              "DocumentMoniker": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj",
+              "RelativeDocumentMoniker": "HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj",
+              "ToolTip": "C:\\Users\\wisni\\Desktop\\SkilledDeveloper\\dotNet\\Mobile\\HomeBudgetMobile\\HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj",
+              "RelativeToolTip": "HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T13:59:15.018Z",
+              "EditorCaption": ""
             }
           ]
         }
