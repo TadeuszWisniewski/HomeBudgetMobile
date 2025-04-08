@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-08T13:31:33.977</Modified>
+      <Modified>2025-04-08T13:59:51.830</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\HomeBudgetMobile.APP.dll">
       <PackagePath>HomeBudgetMobile.APP.dll</PackagePath>
-      <Modified>2025-04-08T13:31:33.493</Modified>
+      <Modified>2025-04-08T13:59:50.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>HomeBudgetMobile.APP.exe</PackagePath>
-      <Modified>2025-04-08T13:31:33.500</Modified>
+      <Modified>2025-04-08T13:59:50.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.APP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

@@ -100,7 +100,7 @@
         </VerticalStackLayout>
         
 
-        <Button BackgroundColor="Green" Margin="10" Text="Reset all" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="Center"  />
+        <Button IsVisible="False" BackgroundColor="Green" Margin="10" Text="Reset all" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="Center"  />
 
     </Grid>
     <!--</Frame>
