@@ -1,0 +1,862 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeBudgetMobile.APP</name>
+    </assembly>
+    <members>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.Refresh">
+            <summary>
+            It is responsible for refreshing internal cache
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.AddItemAsync(`0)">
+            <summary>
+            Managing adding item to the service and handling cache.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.UpdateItemAsync(`0)">
+            <summary>
+            Managing updating item to the service and handling cache.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.DeleteItemAsync(System.Int32)">
+            <summary>
+            Managing deleting item to the service and handling cache.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.GetItemAsync(System.Int32)">
+            <summary>
+            Managing getting item from cache.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HomeBudgetMobile.APP.Services.IDataStore`1.GetItemsAsync(System.Boolean)">
+            <summary>
+            Invoking refresh with force refresh flag
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.BaseViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.Email">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.BaseViewModel.email"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.IsLoading">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.BaseViewModel.isLoading"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.BaseViewModel.goToHomeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.GoToHomeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.GoToHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.BaseViewModel.GoToHome"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.BaseViewModel.logOutCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.LogOutCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.BaseViewModel.LogOutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.BaseViewModel.LogOut"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.Name">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.name"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.IsActive">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.isActive"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.addEditButtonText"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.ExpenseSortId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.expenseSortId"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.getExpenseSortsListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.GetExpenseSortsListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.GetExpenseSortsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.GetExpenseSortsList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.saveExpenseSortCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SaveExpenseSortCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SaveExpenseSortCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SaveExpenseSort"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.deleteExpenseSortCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.DeleteExpenseSortCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.DeleteExpenseSortCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.DeleteExpenseSort(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.updateExpenseSortCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.UpdateExpenseSortCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.UpdateExpenseSortCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.UpdateExpenseSort(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpenseSortsViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.Amount">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.amount"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.AmountValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.amountValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.Currency">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.currency"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.ExpenseSortId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.expenseSortId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.addEditButtonText"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.ExpenseId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.expenseId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.IsActive">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.isActive"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SelectedExpenseSort">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.selectedExpenseSort"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.getExpensesListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.GetExpensesListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.GetExpensesListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.GetExpensesList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.saveExpenseCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SaveExpenseCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SaveExpenseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SaveExpense"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.deleteExpenseCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.DeleteExpenseCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.DeleteExpenseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.DeleteExpense(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.updateExpenseCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.UpdateExpenseCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.UpdateExpenseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.UpdateExpense(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.ExpensesViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.GoalsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.Id">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.id"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.Name">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.name"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.NeededAmount">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.neededAmount"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.Currency">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.currency"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.StartDate">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.startDate"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.EndDate">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.endDate"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.IsActive">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.isActive"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.addEditButtonText"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.getGoalsListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.GetGoalsListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.GetGoalsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.GetGoalsList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.saveGoalCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SaveGoalCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SaveGoalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SaveGoal"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.deleteGoalCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.DeleteGoalCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.DeleteGoalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.DeleteGoal(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.updateGoalCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.UpdateGoalCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.UpdateGoalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.UpdateGoal(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.GoalsViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.IncomeSourceId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.incomeSourceId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.Name">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.name"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.addEditButtonText"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.getIncomeSourceListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.GetIncomeSourceListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.GetIncomeSourceListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.GetIncomeSourceList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.saveIncomeSourceCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SaveIncomeSourceCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SaveIncomeSourceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SaveIncomeSource"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.deleteIncomeSourceCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.DeleteIncomeSourceCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.DeleteIncomeSourceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.DeleteIncomeSource(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.updateIncomeSourceCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.UpdateIncomeSourceCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.UpdateIncomeSourceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.UpdateIncomeSource(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomeSourceViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.IncomesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.addEditButtonText"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.IncomeId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.incomeId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.Amount">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.amount"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.Currency">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.currency"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.IsActive">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.isActive"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SelectedIncomeSource">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.selectedIncomeSource"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.IncomeSourceId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.incomeSourceId"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.getIncomesListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.GetIncomesListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.GetIncomesListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.GetIncomesList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.saveIncomesCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SaveIncomesCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SaveIncomesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SaveIncomes"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.deleteIncomeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.DeleteIncomeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.DeleteIncomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.DeleteIncome(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.updateIncomeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.UpdateIncomeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.UpdateIncomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.UpdateIncome(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.IncomesViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.IdUser">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.idUser"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.EmailValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.emailValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.PasswordValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.passwordValue"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.logInCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.LogInCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.LogInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.LogIn"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.goToSignUpCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.GoToSignUpCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.GoToSignUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.GoToSignUp"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.LogInPageViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.MainPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.NameValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.nameValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.EmailValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.emailValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.PasswordValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.passwordValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.RepeatedPasswordValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.repeatedPasswordValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.TermsCheckboxValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.termsCheckboxValue"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.goToLogInCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.GoToLogInCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.GoToLogInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.GoToLogIn"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.submitCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.SubmitCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.SubmitCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.Submit"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.MainPageViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.SavingsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.Amount">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.amount"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.Currency">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.currency"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.Description">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.description"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.GoalId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.goalId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.AddEditButtonText">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.addEditButtonText"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SavingId">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.savingId"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.IsActive">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.isActive"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SelectedGoal">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.selectedGoal"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.getSavingsListCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.GetSavingsListCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.GetSavingsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.GetSavingsList"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.saveSavingCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SaveSavingCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SaveSavingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SaveSaving"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.deleteSavingCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.DeleteSavingCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.DeleteSavingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.DeleteSaving(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.updateExpenseCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.UpdateExpenseCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.UpdateExpenseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.UpdateExpense(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.setEditModeCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SetEditModeCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SetEditModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.SetEditMode(System.Guid)"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.clearFormCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.ClearFormCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.ClearFormCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SavingsViewModel.ClearForm"/>.</summary>
+        </member>
+        <member name="T:HomeBudgetMobile.APP.ViewModels.SummaryViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.IsRefreshing">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.isRefreshing"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.Email">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.email"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.IncomesValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.incomesValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.ExpensesValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.expensesValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.SavingsValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.savingsValue"/>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoalsValue">
+            <inheritdoc cref="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goalsValue"/>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToIncomesCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomesCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomes"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToIncomeSourcesCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomeSourcesCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomeSourcesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToIncomeSources"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToExpensesCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpensesCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpensesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpenses"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToExpenseSortsCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpenseSortsCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpenseSortsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToExpenseSorts"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToSavingsCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToSavingsCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToSavingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToSavings"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.goToGoalsCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToGoalsCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToGoalsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.GoToGoals"/>.</summary>
+        </member>
+        <member name="F:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.resetAllCommand">
+            <summary>The backing field for <see cref="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.ResetAllCommand"/>.</summary>
+        </member>
+        <member name="P:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.ResetAllCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:HomeBudgetMobile.APP.ViewModels.SummaryViewModel.ResetAll"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsActive">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsActive" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AddEditButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AddEditButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExpenseSortId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExpenseSortId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Amount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Amount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AmountValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AmountValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Currency">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Currency" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExpenseId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExpenseId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedExpenseSort">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedExpenseSort" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NeededAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NeededAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IncomeSourceId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IncomeSourceId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IncomeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IncomeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedIncomeSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedIncomeSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IdUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IdUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmailValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmailValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PasswordValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PasswordValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NameValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NameValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RepeatedPasswordValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RepeatedPasswordValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TermsCheckboxValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TermsCheckboxValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GoalId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GoalId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SavingId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SavingId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedGoal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedGoal" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IncomesValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IncomesValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExpensesValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExpensesValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SavingsValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SavingsValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GoalsValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GoalsValue" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsActive">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsActive" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AddEditButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AddEditButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExpenseSortId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExpenseSortId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Amount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Amount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AmountValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AmountValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Currency">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Currency" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExpenseId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExpenseId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedExpenseSort">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedExpenseSort" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NeededAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NeededAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IncomeSourceId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IncomeSourceId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IncomeId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IncomeId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedIncomeSource">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedIncomeSource" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IdUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IdUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmailValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmailValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PasswordValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PasswordValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NameValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NameValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RepeatedPasswordValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RepeatedPasswordValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TermsCheckboxValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TermsCheckboxValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GoalId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GoalId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SavingId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SavingId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedGoal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedGoal" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IncomesValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IncomesValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExpensesValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExpensesValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SavingsValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SavingsValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GoalsValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GoalsValue" generated properties.</summary>
+        </member>
+    </members>
+</doc>

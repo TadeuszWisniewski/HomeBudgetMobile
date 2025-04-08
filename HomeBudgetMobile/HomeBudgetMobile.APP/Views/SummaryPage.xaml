@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeBudgetMobile.APP.Views.SummaryPage"
+             xmlns:viewmodel="clr-namespace:HomeBudgetMobile.APP.ViewModels"
+             x:DataType="viewmodel:SummaryViewModel"
+             Title="">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Expenses">
+            <MenuFlyoutItem Text="All Expenses" Command="{Binding GoToExpensesCommand}"/>
+            <MenuFlyoutItem Text="Expense Sorts" Command="{Binding GoToExpenseSortsCommand}" />
+        </MenuBarItem>
+        <MenuBarItem Text="Incomes">
+            <MenuFlyoutItem Text="All Incomes" Command="{Binding GoToIncomesCommand}" />
+            <MenuFlyoutItem Text="Income Sources" Command="{Binding GoToIncomeSourcesCommand}" />
+        </MenuBarItem>
+        <MenuBarItem Text="Savings">
+            <MenuFlyoutItem Text="Savings" Command="{Binding GoToSavingsCommand}" />
+            <MenuFlyoutItem Text="Goals" Command="{Binding GoToGoalsCommand}" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding LogOutCommand}" IconImageSource="logout.png" />
+    </ContentPage.ToolbarItems>
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame WidthRequest="400" CornerRadius="10" HasShadow="False" BackgroundColor="MintCream" Padding="10" Margin="0 ,10, 2, 6" Grid.Row="1">-->
+    <Grid RowSpacing="6" ColumnSpacing="6" Padding="10" Margin="0 ,10, 2, 6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Summary" Style="{StaticResource Title}" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+
+        <VerticalStackLayout Grid.Row="1" Spacing="5" Margin="9">
+            <Frame Style="{StaticResource FrameSummary}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SummaryViewModel}}, 
+                            Path=GoToIncomesCommand }" />
+                    </Frame.GestureRecognizers>
+                    <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,2*">
+                        <Label Style="{StaticResource SubTitle}" Text="Incomes" Grid.Row="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"  />
+                        <Label Style="{StaticResource SubSubTitle}" Text="Total value: " Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding IncomesValue}" Grid.Row="2" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+                    </Grid>
+             </Frame>
+
+            <Frame Style="{StaticResource FrameSummary}">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SummaryViewModel}}, 
+                            Path=GoToExpensesCommand }" />
+                </Frame.GestureRecognizers>
+                <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,2*">
+                    <Label Style="{StaticResource SubTitle}" Text="Expenses" Grid.Row="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"  />
+                    <Label Style="{StaticResource SubSubTitle}" Text="Total value: " Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding ExpensesValue}" Grid.Row="2" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+                </Grid>
+            </Frame>
+
+            <Frame Style="{StaticResource FrameSummary}" BackgroundColor="MintCream">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SummaryViewModel}}, 
+                Path=GoToExpensesCommand }" />
+                </Frame.GestureRecognizers>
+                <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,2*">
+                    <Label Style="{StaticResource SubTitle}" Text="Goals" Grid.Row="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"  />
+                    <Label Style="{StaticResource SubSubTitle}" Text="Total value: " Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding SavingsValue}" Grid.Row="2" Grid.ColumnSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+                </Grid>
+            </Frame>
+
+            <!--<Frame Style="{StaticResource FrameSummary}" Grid.Row="1" Grid.Column="1">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SummaryViewModel}}, 
+                Path=GoToExpensesCommand }" />
+                </Frame.GestureRecognizers>
+                <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,2*">
+                    <Label Style="{StaticResource SubTitle}" Text="Savings" Grid.Row="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"  />
+                    <Label Style="{StaticResource SubSubTitle}" Text="Total $ value: " Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding IncomesValue}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+                </Grid>
+            </Frame>-->
+        </VerticalStackLayout>
+        
+
+        <Button BackgroundColor="Green" Margin="10" Text="Reset all" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="Center"  />
+
+    </Grid>
+    <!--</Frame>
+    </Grid>-->
+</ContentPage>

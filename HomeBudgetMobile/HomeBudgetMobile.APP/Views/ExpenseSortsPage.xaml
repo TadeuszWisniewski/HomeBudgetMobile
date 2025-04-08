@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeBudgetMobile.APP.Views.ExpenseSortsPage"
+             xmlns:model="clr-namespace:HomeBudgetMobile.APP.Model.DTO.ExpenseSort"
+             xmlns:viewmodel="clr-namespace:HomeBudgetMobile.APP.ViewModels"
+             x:DataType="viewmodel:ExpenseSortsViewModel"
+             Title="">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="" Command="{Binding GoToHomeCommand}" IconImageSource="home.png">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid ColumnSpacing="1" RowSpacing="1" Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Style="{StaticResource Title}" Text="Expense Sorts" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="5" Padding="5" Grid.Row="1" Margin="9">
+            <Entry Grid.Column="0" x:Name="Name" Placeholder="Enter Name" Text="{Binding Name}" MaxLength="10" />
+            <Entry Grid.Column="1" x:Name="Description" Placeholder="Enter Description" Text="{Binding Description}" MaxLength="20"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*,*" Grid.Row="2" Margin="9" ColumnSpacing="5">
+            <ImageButton Source="add.png" IsEnabled="{Binding IsNotLoading}" Command="{Binding SaveExpenseSortCommand}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="0" ToolTipProperties.Text="Add" />
+            <ImageButton Source="clear.png" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="1" />
+        </Grid>
+
+
+        <RefreshView Grid.Row="4"
+                     Command="{Binding GetExpenseSortsListCommand}" 
+                     IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding ExpenseSorts}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ExpenseSortDto">
+                        <Grid Padding="10" ColumnDefinitions="*, auto">
+                            <Frame HeightRequest="150" Grid.Column="0" BackgroundColor="MintCream">
+                                <!--<Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CarListViewModel}}, Path=GetCarDetailsCommand }" 
+                                                          CommandParameter="{Binding Id}" />
+                                </Frame.GestureRecognizers>-->
+                                <VerticalStackLayout Padding="5" Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Name:" FontAttributes="Bold" ></Label>
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Description:" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding Description}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                                
+                            </Frame>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <ImageButton Source="update.png"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ExpenseSortsViewModel}}, Path=SetEditModeCommand}" 
+                                        CommandParameter="{Binding Id}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" />
+                                <ImageButton Source="delete.png"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ExpenseSortsViewModel}}, Path=DeleteExpenseSortCommand }" 
+                                        CommandParameter="{Binding Id}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="1" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

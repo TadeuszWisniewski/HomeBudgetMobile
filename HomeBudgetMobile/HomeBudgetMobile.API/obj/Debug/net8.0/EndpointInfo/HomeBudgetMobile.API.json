@@ -837,17 +837,29 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
               }
             }
           }
@@ -870,6 +882,28 @@
             "schema": {
               "type": "string",
               "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{email}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1028,7 +1062,11 @@
             "type": "string",
             "nullable": true
           },
-          "surname": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
             "type": "string",
             "nullable": true
           },
@@ -1176,51 +1214,6 @@
           "goalId": {
             "type": "string",
             "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateUserDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "surname": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "incomes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateIncomeDto"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "savings": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateSavingDto"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "expenses": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdateExpenseDto"
-            },
-            "nullable": true,
-            "readOnly": true
           }
         },
         "additionalProperties": false
