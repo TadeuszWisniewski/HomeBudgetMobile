@@ -169,15 +169,6 @@ namespace HomeBudgetMobile.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("IncomeSources");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("57272e05-a899-4c71-8d5e-6496ead7f72e"),
-                            Description = "This is the first IncomeSource",
-                            IsActive = true,
-                            Name = "Salary"
-                        });
                 });
 
             modelBuilder.Entity("HomeBudgetMobile.API.Model.Domain.Saving", b =>
@@ -218,6 +209,10 @@ namespace HomeBudgetMobile.API.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -225,7 +220,7 @@ namespace HomeBudgetMobile.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Surname")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -165,10 +165,10 @@ C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudge
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HomeBudgetMobile.API.props
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HomeBudgetMobile.API.props
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\HomeBudg.AE01E277.Up2Date
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\HomeBudgetMobile.API.dll
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\refint\HomeBudgetMobile.API.dll
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\HomeBudgetMobile.API.pdb
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\HomeBudgetMobile.API.genruntimeconfig.cache
 C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\ref\HomeBudgetMobile.API.dll
+C:\Users\wisni\Desktop\SkilledDeveloper\dotNet\Mobile\HomeBudgetMobile\HomeBudgetMobile.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

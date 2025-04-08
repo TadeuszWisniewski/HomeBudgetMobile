@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeBudgetMobile.APP.Views.GoalsPage"
+             xmlns:model="clr-namespace:HomeBudgetMobile.APP.Model.DTO.Goal"
+             xmlns:viewmodel="clr-namespace:HomeBudgetMobile.APP.ViewModels"
+             x:DataType="viewmodel:GoalsViewModel"
+             Title="">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Command="{Binding GoToHomeCommand}" IconImageSource="home.png" />
+    </ContentPage.ToolbarItems>
+
+    <Grid ColumnSpacing="1" RowSpacing="1" Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Style="{StaticResource Title}" Text="{Binding Title}" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+
+        <Frame Grid.Row="1" BackgroundColor="MintCream">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,2*" RowSpacing="5" ColumnSpacing="5" Padding="5"  Margin="9">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Name:" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  />
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="Name" Placeholder="Enter Name" Text="{Binding Name}" MaxLength="10" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="Amount:" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  />
+                    <Entry Grid.Row="1" Grid.Column="1" x:Name="Amount" Placeholder="Enter Amount" Text="{Binding NeededAmount}" MaxLength="10" />
+                    <Label Grid.Row="2" Grid.Column="0" Text="Description" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    <Entry Grid.Row="2" Grid.Column="1" x:Name="Description" Placeholder="Enter Description" Text="{Binding Description}"/>
+                    <Label Grid.Row="3" Grid.Column="0" Text="Currency" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    <Picker Grid.Row="3" Grid.Column="1" x:Name="picker"
+                        FontAttributes="None"
+                        FontSize="14"
+                        SelectedItem="{Binding Currency}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Char}">
+                                <x:Char>$</x:Char>
+                                <x:Char>€</x:Char>
+                                <x:Char>Z</x:Char>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
+
+
+                <Grid ColumnDefinitions="*,*" Margin="9" ColumnSpacing="5">
+                    <ImageButton Source="add.png" IsEnabled="{Binding IsNotLoading}" Command="{Binding SaveGoalCommand}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="0" ToolTipProperties.Text="Add" />
+                    <ImageButton Source="clear.png" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="1" />
+                </Grid>
+            </VerticalStackLayout>
+        </Frame>
+
+        <!--<Grid RowDefinitions="*,*" ColumnDefinitions="*,*" ColumnSpacing="5" Padding="5" Grid.Row="1" Margin="9">
+            <Entry Grid.Row="0" Grid.Column="0" x:Name="Name" Placeholder="Enter Name" Text="{Binding Name}" MaxLength="10" />
+            <Entry Grid.Row="0" Grid.Column="1" x:Name="Description" Placeholder="Enter Description" Text="{Binding Description}" MaxLength="20"/>
+            <Entry Grid.Row="1" Grid.Column="0" x:Name="NeededAmount" Placeholder="Enter Amount" Text="{Binding NeededAmount}" MaxLength="10" />
+            <Picker Grid.Row="1" Grid.Column="1" x:Name="picker"
+                FontAttributes="Bold"
+                FontSize="20"
+                SelectedItem="{Binding Currency}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Char}">
+                        <x:Char>$</x:Char>
+                        <x:Char>€</x:Char>
+                        <x:Char>Z</x:Char>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+
+        <Grid ColumnDefinitions="*,*" Grid.Row="2" Margin="9" ColumnSpacing="5">
+            <ImageButton Source="add.png" IsEnabled="{Binding IsNotLoading}" Command="{Binding SaveGoalCommand}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="0" ToolTipProperties.Text="Add" />
+            <ImageButton Source="clear.png" Command="{Binding ClearFormCommand}" IsEnabled="{Binding IsNotLoading}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="1" />
+        </Grid>-->
+
+
+        <RefreshView Grid.Row="4"
+                 Command="{Binding GetGoalsListCommand}" 
+                 IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding Goals}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:GoalDto">
+                        <Grid Padding="10" ColumnDefinitions="*, auto">
+                            <Frame HeightRequest="200" Grid.Column="0" BackgroundColor="MintCream">
+                                <!--<Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CarListViewModel}}, Path=GetCarDetailsCommand }" 
+                                                      CommandParameter="{Binding Id}" />
+                            </Frame.GestureRecognizers>-->
+                                <VerticalStackLayout Padding="5" Spacing="5" HorizontalOptions="Start" VerticalOptions="Center">
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Name:" FontAttributes="Bold" ></Label>
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Description:" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding Description}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Needed amount:" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding NeededAmount}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Padding="5" Spacing="5">
+                                        <Label Text="Currency:" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding Currency}" FontAttributes="Bold"></Label>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <ImageButton Source="update.png"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GoalsViewModel}}, Path=SetEditModeCommand}" 
+                                    CommandParameter="{Binding Id}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" />
+                                <ImageButton Source="delete.png"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GoalsViewModel}}, Path=DeleteGoalCommand }" 
+                                    CommandParameter="{Binding Id}" Margin="9" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="5" Grid.Column="1" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

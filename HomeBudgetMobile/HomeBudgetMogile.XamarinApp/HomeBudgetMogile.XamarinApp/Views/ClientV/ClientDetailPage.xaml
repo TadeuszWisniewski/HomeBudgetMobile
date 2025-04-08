@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobileOrders.Views.ClientV.ClientDetailPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Id" FontSize="Medium" />
+            <Label Text="{Binding Id}" FontSize="Medium" />
+            <Label Text="Name" FontSize="Medium" />
+            <Label Text="{Binding Name}" FontSize="Medium"/>
+            <Label Text="Adres" FontSize="Medium" />
+            <Label Text="{Binding Address}" FontSize="Medium"/>
+            <Label Text="PhoneNumber" FontSize="Medium" />
+            <Label Text="{Binding PhoneNumber}" FontSize="Medium"/>
+            <Button Text="Edytuj" Command="{Binding UpdateCommand}" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "HomeBudgetMobile.API\\HomeBudgetMobile.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "HomeBudgetMobile.APP\\HomeBudgetMobile.APP.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,4 +1,5 @@
-﻿namespace HomeBudgetMobile.API.Model.DTO.Saving
+﻿using HomeBudgetMobile.API.Model.DTO.Goal;
+namespace HomeBudgetMobile.API.Model.DTO.Saving
 {
     public class SavingDto
     {
@@ -8,5 +9,7 @@
         public string? Description { get; set; }
         public bool IsActive { get; set; } = true;
         public Guid GoalId { get; set; }
+
+        public GoalDto Goal { get; set; } = null!;
     }
 }

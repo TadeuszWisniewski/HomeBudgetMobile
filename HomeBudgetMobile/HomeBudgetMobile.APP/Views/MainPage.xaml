@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeBudgetMobile.APP.MainPage"
+             xmlns:viewmodel="clr-namespace:HomeBudgetMobile.APP.ViewModels"
+             x:DataType="viewmodel:MainPageViewModel"
+             Title="">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame WidthRequest="400" CornerRadius="10" HasShadow="False" BackgroundColor="MintCream" Padding="10" Margin="0 ,10, 2, 6" Grid.Row="1">
+            <Grid RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Sign Up Form" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" />
+
+                <Label Text="Name" Grid.Row="1" VerticalTextAlignment="Center"  />
+                <Entry Placeholder="Enter your name" Grid.Row="1" Grid.Column="1" Text="{Binding NameValue, Mode=TwoWay}" />
+
+                <Label Text="Email:" Grid.Row="2" VerticalTextAlignment="Center"  />
+                <Entry Placeholder="Enter your Email:" Grid.Row="2" Grid.Column="1" Text="{Binding EmailValue, Mode=TwoWay}" />
+
+                <Label Text="Password:" Grid.Row="3" VerticalTextAlignment="Center" />
+                <Entry Placeholder="Enter your password" Grid.Row="3" Grid.Column="1" IsPassword="True" Text="{Binding PasswordValue, Mode=TwoWay}" />
+
+                <Label Text="Repeat password:" Grid.Row="4" VerticalTextAlignment="Center" />
+                <Entry Placeholder="Repeat your password" Grid.Row="4" Grid.Column="1" IsPassword="True" Text="{Binding RepeatedPasswordValue, Mode=TwoWay}" />
+
+                <CheckBox HorizontalOptions="End" Color="Green" Grid.Row="7" IsChecked="{Binding TermsCheckboxValue, Mode=TwoWay}" />
+                <Label Text="Agree to terms and conditions" Grid.Row="7" Grid.Column="1" VerticalTextAlignment="Center" />
+
+                <Grid Grid.Row="8" Grid.ColumnSpan="2" ColumnSpacing="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor="Green" Text="Submit"  Grid.Column="0"  HorizontalOptions="End" Command="{Binding SubmitCommand}" />
+                    <Button BackgroundColor="Green" Text="LogIn"  Grid.Column="1" HorizontalOptions="Start"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainPageViewModel}}, Path=GoToLogInCommand }"/>
+
+                </Grid>
+            </Grid>
+        </Frame>
+    </Grid>
+
+</ContentPage>

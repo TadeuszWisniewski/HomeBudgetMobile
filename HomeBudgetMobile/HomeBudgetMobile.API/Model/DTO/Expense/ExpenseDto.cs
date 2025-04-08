@@ -11,6 +11,6 @@ namespace HomeBudgetMobile.API.Model.DTO.Expense
         public bool IsActive { get; set; } = true;
         public Guid ExpenseSortId { get; set; }
 
-        //public ExpenseSortDto ExpenseSort { get; set; } = null!;
+        public ExpenseSortDto ExpenseSort { get; set; } = null!;
     }
 }

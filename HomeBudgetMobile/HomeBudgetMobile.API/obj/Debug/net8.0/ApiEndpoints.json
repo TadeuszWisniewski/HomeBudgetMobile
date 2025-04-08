@@ -501,6 +501,22 @@
   },
   {
     "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
+    "Method": "GetByName",
+    "RelativePath": "api/Users/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeBudgetMobile.API.Controllers.UsersController",
     "Method": "GetById",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "GET",
@@ -529,8 +545,8 @@
         "IsRequired": true
       },
       {
-        "Name": "updateUserDto",
-        "Type": "HomeBudgetMobile.API.Model.DTO.User.UpdateUserDto",
+        "Name": "guids",
+        "Type": "System.Guid[]",
         "IsRequired": true
       }
     ],
